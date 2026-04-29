@@ -2119,6 +2119,7 @@ dependencies = [
 name = "nbs-player"
 version = "0.1.0"
 dependencies = [
+ "anyhow",
  "nbs-rust",
  "serde",
  "serde_json",

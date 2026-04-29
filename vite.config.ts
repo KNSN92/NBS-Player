@@ -5,9 +5,18 @@ import tailwindcss from "@tailwindcss/vite";
 // @ts-expect-error process is a nodejs global
 const host = process.env.TAURI_DEV_HOST;
 
+const __dirname = import.meta.resolve("./");
+
 // https://vite.dev/config/
 export default defineConfig(async () => ({
   plugins: [react(), tailwindcss()],
+
+  resolve: {
+    alias: [
+      { find: "@/", replacement: `${__dirname}/src/` },
+      { find: "@assets/", replacement: `${__dirname}/src/assets/` },
+    ]
+  },
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
   //

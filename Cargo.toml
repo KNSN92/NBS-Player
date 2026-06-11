@@ -1,3 +1,0 @@
-[workspace]
-members = ["nbs-rust", "src-tauri"]
-resolver = "3"

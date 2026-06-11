@@ -18,7 +18,7 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 tauri-build = { version = "2", features = [] }
 
 [dependencies]
-nbs-rust = { path = "../nbs-rust", features = ["serde"] }
+nbs-rust = { path = "../nbs-rust", features = ["audio", "midi", "serde"] }
 tauri = { version = "2", features = [] }
 tauri-plugin-opener = "2"
 serde = { version = "1", features = ["derive"] }
@@ -27,3 +27,5 @@ anyhow = "1.0.102"
 tauri-plugin-log = "2"
 log = "0.4.32"
 tauri-plugin-dialog = "2"
+cpal = "0.18.1"
+rtrb = "0.3.4"

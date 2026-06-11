@@ -2277,6 +2277,7 @@ version = "0.1.0"
 dependencies = [
  "byteorder",
  "crossbeam-channel",
+ "serde",
  "thiserror 2.0.18",
 ]
 

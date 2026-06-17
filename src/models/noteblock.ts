@@ -1,28 +1,15 @@
 
-export type Instrument = "Piano" |
-  "DoubleBass" |
-  "BassDrum" |
-  "SnareDrum" |
-  "Click" |
-  "Guitar" |
-  "Flute" |
-  "Bell" |
-  "Chime" |
-  "Xylophone" |
-  "IronXylophone" |
-  "CowBell" |
-  "Didgeridoo" |
-  "Bit" |
-  "Banjo" |
-  "Pling" |
-  number;
-
 export interface Note {
-  instrument: Instrument;
-  key: number;
-  volume: number;
-  panning: number;
-  pitch: number;
+  instrument: number, // u8
+  key: number, // u8
+  volume: number, // u8
+  panning: number, // u8
+  pitch: number, // i16
 }
 
-export type NotesInTick = {layer: number, note: Note}[];
+export type Tick = number;
+export type LayerId = number;
+
+export type NotesInTick = [LayerId, Note][];
+
+export type NoteBlocks = Record<Tick, NotesInTick>;

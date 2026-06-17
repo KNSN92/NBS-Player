@@ -3,6 +3,8 @@ use std::error::Error;
 use anyhow::Result;
 use tauri::App;
 
+mod misc;
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
